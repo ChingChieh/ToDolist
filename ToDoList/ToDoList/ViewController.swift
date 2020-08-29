@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    var uid:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,9 +27,10 @@ class ViewController: UIViewController {
                 if error != nil{
                     print("Register Error")
                 } else {
-                    let uid = result?.user.uid
-                    let ref = Database.database().reference(withPath: "users").child(uid!)
+                    self.uid = (result?.user.uid)!  // The long code for each user
+                    let ref = Database.database().reference(withPath: "users").child(self.uid)
                     ref.setValue(["email":self.emailTF.text!, "password":self.passwordTF.text!])
+                    self.performSegue(withIdentifier: "loginSegue", sender: self)
                 }
             }
         }
@@ -40,12 +42,16 @@ class ViewController: UIViewController {
                 if error != nil{
                     print("Signin Error")
                 } else {
-                    //let uid = result?.user.uid
-                
+                    self.uid = (result?.user.uid)!
+                    self.performSegue(withIdentifier: "loginSegue", sender: self)
                 }
             }
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigation = segue.destination as! UINavigationController
+        let todoVC = navigation.topViewController as! TodoView
+        todoVC.userID = uid
+    }
 }
 

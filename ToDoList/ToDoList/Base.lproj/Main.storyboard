@@ -74,11 +74,62 @@
                     <connections>
                         <outlet property="emailTF" destination="WCM-ce-75w" id="Qib-2m-lyA"/>
                         <outlet property="passwordTF" destination="bnL-Ja-a9e" id="kVs-2v-3iZ"/>
+                        <segue destination="iMA-NS-91u" kind="show" identifier="loginSegue" id="uRi-hK-PVQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="85.59782608695653"/>
+        </scene>
+        <!--Todo View-->
+        <scene sceneID="Oiq-ZH-Zyn">
+            <objects>
+                <viewController id="M8s-l4-2XT" customClass="TodoView" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0NQ-7I-k4s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1x-Da-WMh">
+                                <rect key="frame" x="20" y="152" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="aUL-9W-iOS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZnK-fb-vN5">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="qBx-iX-qoE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uU0-aZ-FJ9"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="y1x-Da-WMh" id="qeH-MI-Uu0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vwi-4S-wlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2068.1159420289855" y="94.565217391304358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MQZ-fL-dTe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iMA-NS-91u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="duO-gX-zrp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="45U-iD-eqd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M8s-l4-2XT" kind="relationship" relationship="rootViewController" id="ugd-vc-aB4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QD7-en-AUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160.8695652173915" y="94.565217391304358"/>
         </scene>
     </scenes>
 </document>

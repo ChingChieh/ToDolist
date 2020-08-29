@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		638B41E924FADF1F00D03C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638B41E824FADF1F00D03C53 /* Assets.xcassets */; };
 		638B41EC24FADF1F00D03C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638B41EA24FADF1F00D03C53 /* LaunchScreen.storyboard */; };
 		638B41F424FAE0C800D03C53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 638B41F324FAE0C800D03C53 /* GoogleService-Info.plist */; };
+		638B41F624FAF30A00D03C53 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B41F524FAF30A00D03C53 /* TodoView.swift */; };
 		DC0F551BD37F32D96C7ACE09 /* Pods_ToDoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7B4DF6F4629359D36667ED /* Pods_ToDoList.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		638B41EB24FADF1F00D03C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		638B41ED24FADF1F00D03C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		638B41F324FAE0C800D03C53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		638B41F524FAF30A00D03C53 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 		D9307FF4289584005A7E833C /* Pods-ToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.release.xcconfig"; path = "Target Support Files/Pods-ToDoList/Pods-ToDoList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				638B41E124FADF1E00D03C53 /* SceneDelegate.swift */,
 				638B41E324FADF1E00D03C53 /* ViewController.swift */,
 				638B41E524FADF1E00D03C53 /* Main.storyboard */,
+				638B41F524FAF30A00D03C53 /* TodoView.swift */,
 				638B41E824FADF1F00D03C53 /* Assets.xcassets */,
 				638B41EA24FADF1F00D03C53 /* LaunchScreen.storyboard */,
 				638B41ED24FADF1F00D03C53 /* Info.plist */,
@@ -91,7 +94,6 @@
 				4D940FBCAACE6EFF305A87D8 /* Pods-ToDoList.debug.xcconfig */,
 				D9307FF4289584005A7E833C /* Pods-ToDoList.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,6 +215,7 @@
 			files = (
 				638B41E424FADF1E00D03C53 /* ViewController.swift in Sources */,
 				638B41E024FADF1E00D03C53 /* AppDelegate.swift in Sources */,
+				638B41F624FAF30A00D03C53 /* TodoView.swift in Sources */,
 				638B41E224FADF1E00D03C53 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
