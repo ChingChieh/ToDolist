@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 struct Todo{
     var todoName: String
@@ -37,7 +39,26 @@ class TodoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if let uid = userID{
             welcomeLabel.text = uid
         }
+        
+        loadTodos()
         // Do any additional setup after loading the view.
+    }
+    
+    func loadTodos(){
+        let ref = Database.database().reference(withPath: "users").child(userID!).child("todos")
+        ref.observeSingleEvent(of: .value){ (snapshot) in
+            for child in snapshot.children.allObjects as! [DataSnapshot] {
+                let todoName = child.key
+                let todoRef = ref.child(todoName)
+                
+                todoRef.observeSingleEvent(of: .value, with: {(todoSnapshot) in
+                    let value = todoSnapshot.value as? NSDictionary
+                    let isChecked = value!["isChecked"] as? Bool
+                    self.todos.append(Todo(todoName: todoName, isChecked: isChecked!)) //former is from todo struct and latter is from firebase
+                    self.todoTV.reloadData()
+                })
+            }
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,6 +71,8 @@ class TodoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath) as! TodoCell
+        // display todo list
+        cell.todoLabel.text = todos[indexPath.row].todoName
         return cell
     }
     /*
