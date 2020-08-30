@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     
     var uid:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navigation = segue.destination as! UINavigationController
         let todoVC = navigation.topViewController as! TodoView

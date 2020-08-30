@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635DC06924FC209600AA8475 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635DC06824FC209500AA8475 /* TodoCell.swift */; };
 		638B41E024FADF1E00D03C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B41DF24FADF1E00D03C53 /* AppDelegate.swift */; };
 		638B41E224FADF1E00D03C53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B41E124FADF1E00D03C53 /* SceneDelegate.swift */; };
 		638B41E424FADF1E00D03C53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B41E324FADF1E00D03C53 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		0D7B4DF6F4629359D36667ED /* Pods_ToDoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D940FBCAACE6EFF305A87D8 /* Pods-ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.debug.xcconfig"; path = "Target Support Files/Pods-ToDoList/Pods-ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
+		635DC06824FC209500AA8475 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 		638B41DC24FADF1E00D03C53 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638B41DF24FADF1E00D03C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		638B41E124FADF1E00D03C53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				638B41E124FADF1E00D03C53 /* SceneDelegate.swift */,
 				638B41E324FADF1E00D03C53 /* ViewController.swift */,
 				638B41E524FADF1E00D03C53 /* Main.storyboard */,
+				635DC06824FC209500AA8475 /* TodoCell.swift */,
 				638B41F524FAF30A00D03C53 /* TodoView.swift */,
 				638B41E824FADF1F00D03C53 /* Assets.xcassets */,
 				638B41EA24FADF1F00D03C53 /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 				638B41E424FADF1E00D03C53 /* ViewController.swift in Sources */,
 				638B41E024FADF1E00D03C53 /* AppDelegate.swift in Sources */,
 				638B41F624FAF30A00D03C53 /* TodoView.swift in Sources */,
+				635DC06924FC209600AA8475 /* TodoCell.swift in Sources */,
 				638B41E224FADF1E00D03C53 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
