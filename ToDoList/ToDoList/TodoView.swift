@@ -73,6 +73,12 @@ class TodoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath) as! TodoCell
         // display todo list
         cell.todoLabel.text = todos[indexPath.row].todoName
+        if todos[indexPath.row].isChecked {
+            cell.checkmarkImage.image = UIImage(named: "checkmark.png")
+        }
+        else {
+            cell.checkmarkImage.image = nil
+        }
         return cell
     }
     /*
