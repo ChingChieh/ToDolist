@@ -154,7 +154,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZnK-fb-vN5">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="qBx-iX-qoE"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uU0-aZ-FJ9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uU0-aZ-FJ9">
+                            <connections>
+                                <action selector="addTodo:" destination="M8s-l4-2XT" id="Off-it-KBU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="todoTV" destination="fJ0-aj-DcD" id="oWm-0z-Azc"/>

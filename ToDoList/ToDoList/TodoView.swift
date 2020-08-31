@@ -44,6 +44,29 @@ class TodoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func addTodo(_ sender: Any) {
+        let todoAlert = UIAlertController(title: "New Task", message: "Add a todo", preferredStyle: .alert)
+        
+        todoAlert.addTextField()
+        
+        let addTodoAction = UIAlertAction(title: "Add", style: .default) { (action) in
+            let todoText = todoAlert.textFields![0].text
+            self.todos.append(Todo(todoName: todoText!, isChecked: false))
+            
+            let ref = Database.database().reference(withPath: "users").child(self.userID!).child("todos")
+            ref.child(todoText!).setValue(["isChecked" : false])
+            
+            self.todoTV.reloadData()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        
+        todoAlert.addAction(addTodoAction)
+        todoAlert.addAction(cancelAction)
+        
+        present(todoAlert, animated: true, completion: nil)
+    }
+    
     func loadTodos(){
         let ref = Database.database().reference(withPath: "users").child(userID!).child("todos")
         ref.observeSingleEvent(of: .value){ (snapshot) in
