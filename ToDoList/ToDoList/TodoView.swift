@@ -81,14 +81,27 @@ class TodoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ref = Database.database().reference(withPath: "users").child(userID!).child("todos").child(todos[indexPath.row].todoName)
+        
+        if todos[indexPath.row].isChecked{
+            todos[indexPath.row].isChecked = false
+            ref.updateChildValues(["isChecked" : false])
+        } else {
+            todos[indexPath.row].isChecked = true
+            ref.updateChildValues(["isChecked" : true])
+        }
+        todoTV.reloadData()
     }
-    */
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let ref = Database.database().reference(withPath: "users").child(userID!).child("todos").child(todos[indexPath.row].todoName)
+            ref.removeValue()
+            todos.remove(at: indexPath.row)
+            todoTV.reloadData()
+        }
+    }
 
 }
