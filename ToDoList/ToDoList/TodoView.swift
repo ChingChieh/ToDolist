@@ -37,7 +37,7 @@ class TodoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         todoTV.rowHeight = 80
         
         if let uid = userID{
-            welcomeLabel.text = uid
+            welcomeLabel.text = ""
         }
         
         loadTodos()
