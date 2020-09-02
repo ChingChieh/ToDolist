@@ -1,4 +1,5 @@
 # ToDolist
+This is an iOS + Firebase project for CS 8803 MAS HW1.
 
 ## Picture
 * login page
