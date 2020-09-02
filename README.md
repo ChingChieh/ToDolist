@@ -10,4 +10,4 @@ This is an iOS + Firebase project for CS 8803 MAS HW1.
 <img src="https://i.imgur.com/fey70zX.jpg" width = "300" height = "649" />
 
 ## Operation
-<img src="https://i.imgur.com/CYzeCIH.gif" />
+<img src="https://i.imgur.com/fZy63iF.gif" />
