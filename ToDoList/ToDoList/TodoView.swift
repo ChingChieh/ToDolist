@@ -61,8 +61,9 @@ class TodoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default)
         
-        todoAlert.addAction(addTodoAction)
         todoAlert.addAction(cancelAction)
+        todoAlert.addAction(addTodoAction)
+        
         
         present(todoAlert, animated: true, completion: nil)
     }
