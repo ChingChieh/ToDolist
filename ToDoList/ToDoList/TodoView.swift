@@ -36,9 +36,11 @@ class TodoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         todoTV.dataSource = self
         todoTV.rowHeight = 80
         
+        /*
         if let uid = userID{
             welcomeLabel.text = ""
         }
+        */
         
         loadTodos()
         // Do any additional setup after loading the view.
@@ -61,8 +63,9 @@ class TodoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default)
         
-        todoAlert.addAction(addTodoAction)
         todoAlert.addAction(cancelAction)
+        todoAlert.addAction(addTodoAction)
+        
         
         present(todoAlert, animated: true, completion: nil)
     }
