@@ -17,7 +17,7 @@ struct Todo{
 
 class TodoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var welcomeLabel: UILabel!
+    //@IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var todoTV: UITableView!
     
     

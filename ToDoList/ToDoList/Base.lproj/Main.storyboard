@@ -109,17 +109,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1x-Da-WMh">
-                                <rect key="frame" x="20" y="56" width="374" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="0BV-OM-GLl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fJ0-aj-DcD">
-                                <rect key="frame" x="0.0" y="93" width="414" height="623"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="660"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoCell" id="oU0-Zt-Jau" customClass="TodoCell" customModule="ToDoList" customModuleProvider="target">
@@ -162,13 +153,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="y1x-Da-WMh" firstAttribute="centerX" secondItem="fJ0-aj-DcD" secondAttribute="centerX" id="GcA-Uh-U2m"/>
+                            <constraint firstItem="fJ0-aj-DcD" firstAttribute="top" secondItem="aUL-9W-iOS" secondAttribute="top" id="5su-Mp-Eio"/>
                             <constraint firstItem="fJ0-aj-DcD" firstAttribute="bottom" secondItem="aUL-9W-iOS" secondAttribute="bottom" id="NQ3-ZR-lNF"/>
-                            <constraint firstItem="y1x-Da-WMh" firstAttribute="trailing" secondItem="0NQ-7I-k4s" secondAttribute="trailingMargin" id="Rhm-DC-Xmc"/>
-                            <constraint firstItem="fJ0-aj-DcD" firstAttribute="top" secondItem="y1x-Da-WMh" secondAttribute="bottom" constant="8" id="UKl-ff-s2k"/>
                             <constraint firstItem="fJ0-aj-DcD" firstAttribute="leading" secondItem="aUL-9W-iOS" secondAttribute="leading" id="Yvi-7a-Ld2"/>
-                            <constraint firstItem="y1x-Da-WMh" firstAttribute="top" secondItem="aUL-9W-iOS" secondAttribute="top" id="lvY-i9-Etk"/>
-                            <constraint firstItem="y1x-Da-WMh" firstAttribute="leading" secondItem="0NQ-7I-k4s" secondAttribute="leadingMargin" id="vXn-80-cnL"/>
+                            <constraint firstItem="fJ0-aj-DcD" firstAttribute="centerX" secondItem="0NQ-7I-k4s" secondAttribute="centerX" id="nlY-jf-55A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aUL-9W-iOS"/>
                     </view>
@@ -181,7 +169,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="todoTV" destination="fJ0-aj-DcD" id="oWm-0z-Azc"/>
-                        <outlet property="welcomeLabel" destination="y1x-Da-WMh" id="qeH-MI-Uu0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vwi-4S-wlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
